@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EPC HelpBot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        #header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #chatbot-container {
+
+        }
+
+        #instructions {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+      #bp-web-widget-container {
+        height: 500px;
+        width: 850px;
+        margin: auto;
+        flex-grow: 1;
+      }
+      #bp-web-widget-container div {
+        height: 1000%;0
+      }
+      .webchatIframe {
+        position: relative !important;
+        height: 1000%;
+        width: 100%;
+        
+      }
+      
+
+    </style>
+      <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1>EPC HelpBot</h1>
+        <p>Say Hello to our GPT3.5 Enhanced EPC help bot.</p>
+    </div>
+
+    
+    
+    <!-- Chatbot Container -->
+    <div id="chatbot-container">
+      <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+      <script>
+        window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with bot",
+          "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+          "botId": "d06becdc-e3d0-4695-921f-b79fe8deb1cc",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "d06becdc-e3d0-4695-921f-b79fe8deb1cc",
+          "hideWidget": true,
+          "disableAnimations": false,
+          "closeOnEscape": false,
+          "showConversationsButton": false,
+          "enableTranscriptDownload": false,
+          "showPoweredBy": false,
+          "stylesheet": "https://cdn.botpress.cloud/webchat/v0/themes/shareable.css",
+          "className": "webchatIframe",
+          "containerWidth": "100%25",
+          "layoutWidth": "100%25",  
+          "showCloseButton": false
+        });
+        window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+      </script>
+    </div>
+
+    <!-- Instructions on using the chatbot -->
+    <div id="instructions">
+    <div>
+        <h2>How to Check EPC or Benefits:</h2>
+        <p>
+            If you want to check your Energy Performance Certificate (EPC) rating or see if you qualify for any benefits related to energy efficiency upgrades,
+            our EPC HelpBot is here to assist you. Simply start a conversation with the bot and ask any questions you have regarding EPC or benefits.
+            The bot will provide you with personalized information and guide you through the process. Whether you need advice on improving your home's energy efficiency or understanding available grants and benefits, the EPC HelpBot has got you covered.
+        </p>
+        <p>
+            Don't hesitate to interact with the bot and ask follow-up questions for more detailed assistance. If you encounter any technical issues or need further support,
+            feel free to contact our dedicated support team through the contact information provided on our website. We are committed to helping you lower your energy bills and make your home more sustainable.
+        </p>
+    </div>
+    </div>
+
+
+</body>
+</html>
